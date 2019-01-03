@@ -3,11 +3,13 @@ const express = require('express');
 
 const appUrl = process.env.APP_URL;
 const oAuthUrl = process.env.OAUTH2_URL;
+const clientId = process.env.OAUTH2_CLIENT_ID;
+const clientSecret = process.env.OAUTH2_CLIENT_SECRET;
 
 const credentials = {
   client: {
-    id: 'test',
-    secret: 'secret'
+    id: clientId,
+    secret: clientSecret
   },
   auth: {
     tokenHost: oAuthUrl,
